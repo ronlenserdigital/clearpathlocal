@@ -189,8 +189,24 @@ section{position:relative}
 .vision-text{font-family:var(--font-display);font-weight:500;font-size:clamp(1.5rem,3.4vw,2.5rem);line-height:1.32;letter-spacing:-.02em}
 .vision-text::selection{background:var(--green)}
 
+/* ---- proof ---- */
+.proof{background:var(--paper)}
+.proof-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.proof-card{position:relative;border-radius:24px;overflow:hidden;background:var(--paper-2);border:1px solid var(--line);box-shadow:0 30px 60px -38px rgba(13,19,15,.28);transition:transform .45s var(--ease)}
+.proof-card:hover{transform:translateY(-6px)}
+.proof-img{overflow:hidden;aspect-ratio:4/3}
+.proof-img img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .8s var(--ease)}
+.proof-card.tall .proof-img img{object-position:center 16%}
+.proof-card:hover .proof-img img{transform:scale(1.05)}
+.proof-card figcaption{padding:24px 26px;color:var(--muted);font-size:.98rem}
+.proof-tag{display:block;font-family:var(--font-display);font-weight:600;color:var(--ink);font-size:1.12rem;margin-bottom:7px}
+@media(max-width:760px){.proof-grid{grid-template-columns:1fr}}
+
 /* ---- contact ---- */
 .contact{background:var(--paper)}
+.contact-direct{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:28px}
+.contact-direct a{font-family:var(--font-display);font-weight:600;font-size:1.15rem;color:var(--ink);position:relative;transition:color .25s}
+.contact-direct a:hover{color:var(--green-deep)}
 .contact-inner{max-width:1150px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start}
 .contact-copy{position:sticky;top:120px}
 .contact-points{list-style:none;margin-top:26px;display:flex;flex-direction:column;gap:12px}
